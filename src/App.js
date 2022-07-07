@@ -58,25 +58,25 @@ class App extends Component {
   render() { 
     return (
       <>
-        <Navbar />
-        <div className="container">
-          <h1>Cosa desideri ordinare?</h1>
-          <h6>Prodotti carrello: {this.state.totalQuant}</h6>
-          {/* <h6>Totale: {Math.round(this.state.totToPay * 100) / 100}€; IVA: 22% {(Math.round((this.state.totToPay * 22 / 100) * 100) / 100)}€; TOT + IVA: {Math.round(this.state.totToPay * 100) / 100 + (Math.round((this.state.totToPay * 22 / 100) * 100) / 100)}€</h6> */}
-          <h6>Totale: {Math.round(this.state.totToPay * 100) / 100 + (Math.round((this.state.totToPay * 22 / 100) * 100) / 100)}€</h6>
-          <br/>
-          <div className="row">
-            {this.state.cards.map(card => (
-              <Card
-              key={card.id}
-              onDelete={this.handleDelete}
-              onIncrement={this.handleIncrement}
-              onDecrement={this.handleDecrement}
-              showMessage={this.state.showMessage}
-              card={card} />
-            ))}
+          <Navbar />
+          <div className="container">
+            <h1>Cosa desideri ordinare?</h1>
+            <h6>Prodotti carrello: {this.state.totalQuant}</h6>
+            {/* <h6>Totale: {Math.round(this.state.totToPay * 100) / 100}€; IVA: 22% {(Math.round((this.state.totToPay * 22 / 100) * 100) / 100)}€; TOT + IVA: {Math.round(this.state.totToPay * 100) / 100 + (Math.round((this.state.totToPay * 22 / 100) * 100) / 100)}€</h6> */}
+            <h6>Totale: {(Math.round(this.state.totToPay * 100) / 100) + (Math.round((this.state.totToPay * 22 / 100) * 100) / 100)}€</h6>
+            <br/>
+            <div className="row">
+              {this.state.cards.map(card => (
+                <Card
+                key={card.id}
+                onDelete={this.handleDelete}
+                onIncrement={this.handleIncrement}
+                onDecrement={this.handleDecrement}
+                showMessage={this.state.showMessage}
+                card={card} />
+              ))}
+            </div>
           </div>
-        </div>
       </>
     );
   }
