@@ -1,0 +1,24 @@
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+.quantity-text {
+    color: black;
+    font-size: 13px;
+    margin-top: 5px;
+    -webkit-animation: fadeinout 7s linear forwards;
+    animation: fadeinout 4s linear forwards;
+    margin-top: 15%;
+    text-align: center;
+}
+
+
+.btn btn-primary:focus {
+    border-radius: none;
+}

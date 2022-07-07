@@ -1,0 +1,11 @@
+.navBar {
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+.navBar:hover {
+    color:gray;
+    cursor:pointer;
+}
